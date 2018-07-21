@@ -16,7 +16,6 @@ function Send-ToEmail([string]$email, [string]$attachmentpath){
     $message.Body = "";
     $attachment = New-Object Net.Mail.Attachment($attachmentpath);
     $message.Attachments.Add($attachment);
-
     $smtp = new-object Net.Mail.SmtpClient("stmp.mail.com");
     $smtp.EnableSSL = $true;
     $smtp.Credentials = New-Object System.Net.NetworkCredential($Username, $Password);
