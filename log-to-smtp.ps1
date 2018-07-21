@@ -10,7 +10,7 @@ $path = "Path of Log to Send.";
 function Send-ToEmail([string]$email, [string]$attachmentpath){
 
     $message = new-object Net.Mail.MailMessage;
-    $message.From = "account@smtpdomain.com";
+    $message.From = "alias@domain.com";
     $message.To.Add($email);
     $message.Subject = "Describe Sent Log";
     $message.Body = "";
