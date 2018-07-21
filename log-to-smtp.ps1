@@ -5,7 +5,7 @@ start-service "Full Service Name."
 
 $Username = "domain/acct";
 $Password = "cred";
-$path = "Path of Log to Send.";
+$path = "Path of Log to Send_$(get-date -f MM-dd).txt";
 
 function Send-ToEmail([string]$email, [string]$attachmentpath){
 
