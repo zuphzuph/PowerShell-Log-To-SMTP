@@ -1,14 +1,16 @@
 stop-service "Full Service Name."
 Copy-Item "Path to Debugger File." -Destination "Save Debug File To."
-Clear-Content "Clear Log File."
+Clear-Content "C:\PathtoLog.txt."
 start-service "Full Service Name."
+
+[string]$zipFN = 'C:\PathtoLog.zip'
+[string]$fileToZip = 'C:\PathtoLog.txt'
 
 $Username = "domain/acct";
 $Password = "cred";
-$path = "Path of Log to Send_$(get-date -f MM-dd).txt";
+$path = "C:\PathtoLog.txt";
 
 function Send-ToEmail([string]$email, [string]$attachmentpath){
-
     $message = new-object Net.Mail.MailMessage;
     $message.From = "alias@domain.com";
     $message.To.Add($email);
