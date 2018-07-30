@@ -3,8 +3,8 @@ Copy-Item "From Path." -Destination "Save Path."
 Clear-Content "C:\PathtoLog.txt."
 start-service "Full Service Name."
 
-[string]$zipFN = 'C:\PathtoLog.zip'
 [string]$fileToZip = 'C:\PathtoLog.txt'
+[string]$zipFN = 'C:\PathtoLog.zip'
 
 $Username = "domain/acct";
 $Password = "cred";
