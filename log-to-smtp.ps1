@@ -1,5 +1,5 @@
 stop-service "Full Service Name."
-Copy-Item "Path to Debugger File." -Destination "Save Debug File To."
+Copy-Item "From Path." -Destination "Save Path."
 Clear-Content "C:\PathtoLog.txt."
 start-service "Full Service Name."
 
